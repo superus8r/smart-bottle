@@ -1,10 +1,11 @@
 package com.mpandg.mpandgbluetooth.activity;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.mpandg.mpandgbluetooth.R;
 
-public class RegistrationActivity extends BaseActivity {
+public class RegistrationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
