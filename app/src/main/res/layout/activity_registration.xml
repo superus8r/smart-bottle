@@ -42,12 +42,11 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinner"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:layout_gravity="center_vertical">
-
-            </android.support.v7.widget.AppCompatSpinner>
+                android:layout_gravity="center_vertical" />
 
         </LinearLayout>
 

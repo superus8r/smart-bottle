@@ -66,7 +66,7 @@ public final class DeviceControlActivity extends BaseActivity {
         MSG_CONNECTING = getString(R.string.msg_connecting);
         MSG_CONNECTED = getString(R.string.msg_connected);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_terminal);
         if (isConnected() && (savedInstanceState != null)) {
             setDeviceName(savedInstanceState.getString(DEVICE_NAME));
         } else //noinspection ConstantConditions
