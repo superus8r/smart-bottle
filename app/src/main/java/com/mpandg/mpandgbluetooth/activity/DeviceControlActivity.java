@@ -178,11 +178,11 @@ public final class DeviceControlActivity extends BaseActivity {
                 }
                 return true;
 
-            case R.id.menu_clear:
+            case R.id.action_clear:
                 if (logTextView != null) logTextView.setText("");
                 return true;
 
-            case R.id.menu_send:
+            case R.id.action_send:
                 if (logTextView != null) {
                     final String msg = logTextView.getText().toString();
                     final Intent intent = new Intent(Intent.ACTION_SEND);
@@ -192,7 +192,7 @@ public final class DeviceControlActivity extends BaseActivity {
                 }
                 return true;
 
-            case R.id.menu_settings:
+            case R.id.action_settings:
                 final Intent intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
                 return true;

@@ -45,4 +45,6 @@
     <string name="need_clean">Clear previous command</string>
     <string name="need_clean_summary">Cleanup command view after sending</string>
     <string name="dummy">dummy</string>
+    <string name="terminal">Terminal</string>
+    <string name="register">Registration</string>
 </resources>

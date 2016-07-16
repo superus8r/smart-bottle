@@ -7,19 +7,19 @@
         android:title="@string/action_bluetooth" />
 
     <item
-        android:id="@+id/menu_clear"
+        android:id="@+id/action_clear"
         android:orderInCategory="100"
         app:showAsAction="never"
         android:title="@string/menu_clear" />
 
     <item
-        android:id="@+id/menu_send"
+        android:id="@+id/action_send"
         android:orderInCategory="100"
         app:showAsAction="never"
         android:title="@string/menu_send" />
 
     <item
-        android:id="@+id/menu_settings"
+        android:id="@+id/action_settings"
         android:orderInCategory="100"
         app:showAsAction="never"
         android:title="@string/menu_settings" />
