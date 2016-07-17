@@ -10,4 +10,5 @@
     <dimen name="text_size_card_header">18sp</dimen>
     <dimen name="card_horizontal_padding">16dp</dimen>
     <dimen name="card_vertical_padding">24dp</dimen>
+    <dimen name="page_height">2000dp</dimen>
 </resources>

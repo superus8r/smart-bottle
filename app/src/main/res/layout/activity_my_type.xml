@@ -1,159 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:weightSum="5"
+    android:background="@color/primary_light"
     tools:context="com.mpandg.mpandgbluetooth.activity.MyTypeActivity">
 
-    <!--header-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.5"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
 
-        <ImageView
-            android:id="@+id/header"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-    <!--row1-->
-    <LinearLayout
-        style="@style/RowLayout">
-
+        <!--header-->
         <LinearLayout
-            style="@style/CardLayout">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                style="@style/TypeCard">
-
-                <TextView
-                    style="@style/CardTitle" />
-
-                <ImageView
-                    style="@style/CardImage"/>
-
-            </android.support.v7.widget.CardView>
+            <ImageView
+                android:id="@+id/header"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/my_type"/>
 
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/CardLayout">
+        <!--row1-->
+        <LinearLayout style="@style/RowLayout">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                style="@style/TypeCard">
+            <LinearLayout style="@style/CardLayout">
 
-                <TextView
-                    style="@style/CardTitle" />
+                <android.support.v7.widget.CardView
+                    style="@style/TypeCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <ImageView
-                    style="@style/CardImage"/>
+                    <TextView style="@style/CardTitle" />
 
-            </android.support.v7.widget.CardView>
+                    <ImageView style="@style/CardImage" />
 
-        </LinearLayout>
+                </android.support.v7.widget.CardView>
 
-    </LinearLayout>
+            </LinearLayout>
 
-    <!--row2-->
-    <LinearLayout
-        style="@style/RowLayout">
+            <LinearLayout style="@style/CardLayout">
 
-        <LinearLayout
-            style="@style/CardLayout">
+                <android.support.v7.widget.CardView
+                    style="@style/TypeCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                style="@style/TypeCard">
+                    <TextView style="@style/CardTitle" />
 
-                <TextView
-                    style="@style/CardTitle" />
+                    <ImageView style="@style/CardImage" />
 
-                <ImageView
-                    android:id="@+id/runner_icon"
-                    style="@style/CardImage"/>
+                </android.support.v7.widget.CardView>
 
-            </android.support.v7.widget.CardView>
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/CardLayout">
+        <!--row2-->
+        <LinearLayout style="@style/RowLayout">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                style="@style/TypeCard">
+            <LinearLayout style="@style/CardLayout">
 
-                <TextView
-                    style="@style/CardTitle" />
+                <android.support.v7.widget.CardView
+                    style="@style/TypeCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/biker_icon"
-                    style="@style/CardImage"/>
+                    <TextView style="@style/CardTitle" />
 
-            </android.support.v7.widget.CardView>
+                    <ImageView
+                        android:id="@+id/runner_icon"
+                        style="@style/CardImage" />
 
-        </LinearLayout>
+                </android.support.v7.widget.CardView>
 
-    </LinearLayout>
+            </LinearLayout>
 
-    <!--row3-->
-    <LinearLayout
-        style="@style/RowLayout">
+            <LinearLayout style="@style/CardLayout">
 
-        <LinearLayout
-            style="@style/CardLayout">
+                <android.support.v7.widget.CardView
+                    style="@style/TypeCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                style="@style/TypeCard">
+                    <TextView style="@style/CardTitle" />
 
-                <TextView
-                    style="@style/CardTitle" />
+                    <ImageView
+                        android:id="@+id/biker_icon"
+                        style="@style/CardImage" />
 
-                <ImageView
-                    android:id="@+id/aged_icon"
-                    style="@style/CardImage"/>
+                </android.support.v7.widget.CardView>
 
-            </android.support.v7.widget.CardView>
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/CardLayout">
+        <!--row3-->
+        <LinearLayout style="@style/RowLayout">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                style="@style/TypeCard">
+            <LinearLayout style="@style/CardLayout">
 
-                <TextView
-                    style="@style/CardTitle" />
+                <android.support.v7.widget.CardView
+                    style="@style/TypeCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/add_new_icon"
-                    style="@style/CardImage"/>
+                    <TextView style="@style/CardTitle" />
 
-            </android.support.v7.widget.CardView>
+                    <ImageView
+                        android:id="@+id/aged_icon"
+                        style="@style/CardImage" />
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/CardLayout">
+
+                <android.support.v7.widget.CardView
+                    style="@style/TypeCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView style="@style/CardTitle" />
+
+                    <ImageView
+                        android:id="@+id/add_new_icon"
+                        style="@style/CardImage" />
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

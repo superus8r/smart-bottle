@@ -11,4 +11,9 @@
         app:showAsAction="never"
         android:title="@string/register" />
 
+    <item
+        android:id="@+id/action_my_type"
+        app:showAsAction="never"
+        android:title="@string/my_type" />
+
 </menu>

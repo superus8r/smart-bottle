@@ -36,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, RegistrationActivity.class));
                 return true;
 
+            case R.id.action_my_type:
+                startActivity(new Intent(this, MyTypeActivity.class));
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }

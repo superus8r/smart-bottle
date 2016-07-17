@@ -51,6 +51,7 @@
     <string name="weight">Weight</string>
     <string name="height">Height</string>
     <string name="name">Name</string>
+    <string name="my_type">My Type</string>
 
     <string-array name="sex_array">
         <item>Female</item>
