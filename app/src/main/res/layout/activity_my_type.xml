@@ -24,8 +24,8 @@
 
             <ImageView
                 android:id="@+id/header"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="@dimen/mytype_header_width"
+                android:layout_height="@dimen/mytype_header_height"
                 android:src="@drawable/my_type"/>
 
         </LinearLayout>

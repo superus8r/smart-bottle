@@ -11,4 +11,6 @@
     <dimen name="card_horizontal_padding">16dp</dimen>
     <dimen name="card_vertical_padding">24dp</dimen>
     <dimen name="page_height">2000dp</dimen>
+    <dimen name="mytype_header_width">256dp</dimen>
+    <dimen name="mytype_header_height">128dp</dimen>
 </resources>
