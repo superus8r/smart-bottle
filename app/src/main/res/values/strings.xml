@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MPandG Bluetooth</string>
+    <string name="app_name">Hoosh Noosh</string>
 
     <!-- prefence keys, no translation needed -->
     <string name="pref_commands_mode">pref_commands_mode</string>
