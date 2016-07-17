@@ -122,7 +122,7 @@
         app:layout_anchorGravity="bottom|right|end"
         style="@style/FabStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
 
     <View
         android:id="@+id/snack"
