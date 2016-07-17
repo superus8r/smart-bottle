@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CardImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/card_vertical_padding</item>
+        <item name="android:layout_marginEnd">@dimen/card_horizontal_padding</item>
+        <item name="android:layout_gravity">bottom|end</item>
+        <item name="android:src">@drawable/ic_android_black_48dp</item>
+    </style>
+
+    <style name="CardTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/card_vertical_padding</item>
+        <item name="android:layout_marginStart">@dimen/card_horizontal_padding</item>
+        <item name="android:layout_gravity">top|start</item>
+        <item name="android:text">@string/dummy</item>
+        <item name="android:textSize">@dimen/text_size_card_header</item>
+    </style>
+</resources>

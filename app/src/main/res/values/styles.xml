@@ -8,15 +8,44 @@
         <item name="colorAccent">@color/accent</item>
     </style>
 
-    <style name="DialogTheme" parent="Theme.AppCompat.Dialog"/>
+    <style name="DialogTheme" parent="Theme.AppCompat.Dialog" />
 
     <style name="TypeCard" parent="CardView">
         <item name="android:layout_margin">@dimen/card_margin</item>
-        <item name="android:paddingTop">@dimen/card_vertical_padding</item>
-        <item name="android:paddingBottom">@dimen/card_vertical_padding</item>
-        <item name="android:paddingLeft">@dimen/card_horizontal_padding</item>
-        <item name="android:paddingRight">@dimen/card_horizontal_padding</item>
     </style>
 
-    <dimen name="card_vertical_padding">24dp</dimen>
+    <style name="CardImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/card_vertical_padding</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_gravity">bottom|end</item>
+        <item name="android:src">@drawable/ic_android_black_48dp</item>
+    </style>
+
+    <style name="CardTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/card_vertical_padding</item>
+        <item name="android:layout_marginLeft">@dimen/card_horizontal_padding</item>
+        <item name="android:layout_gravity">top|start</item>
+        <item name="android:text">@string/dummy</item>
+        <item name="android:textSize">@dimen/text_size_card_header</item>
+    </style>
+
+    <style name="CardLayout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="RowLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_weight">1.3</item>
+    </style>
+
 </resources>

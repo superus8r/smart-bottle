@@ -28,17 +28,10 @@
 
     <!--row1-->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        style="@style/RowLayout">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight="1"
-            android:gravity="center">
+            style="@style/CardLayout">
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -46,29 +39,17 @@
                 style="@style/TypeCard">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="top|start"
-                    android:textSize="@dimen/text_size_card_header"
-                    android:text="@string/dummy"/>
-                
+                    style="@style/CardTitle" />
+
                 <ImageView
-                    android:id="@+id/general_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|end"
-                    android:src="@drawable/ic_android_black_48dp"/>
-                
+                    style="@style/CardImage"/>
+
             </android.support.v7.widget.CardView>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:gravity="center">
+            style="@style/CardLayout">
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -76,18 +57,10 @@
                 style="@style/TypeCard">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="top|start"
-                    android:textSize="@dimen/text_size_card_header"
-                    android:text="@string/dummy"/>
+                    style="@style/CardTitle" />
 
                 <ImageView
-                    android:id="@+id/body_builder_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|end"
-                    android:src="@drawable/ic_android_black_48dp"/>
+                    style="@style/CardImage"/>
 
             </android.support.v7.widget.CardView>
 
@@ -97,17 +70,10 @@
 
     <!--row2-->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        style="@style/RowLayout">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight="1"
-            android:gravity="center">
+            style="@style/CardLayout">
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -115,29 +81,18 @@
                 style="@style/TypeCard">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="top|start"
-                    android:textSize="@dimen/text_size_card_header"
-                    android:text="@string/dummy"/>
+                    style="@style/CardTitle" />
 
                 <ImageView
                     android:id="@+id/runner_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|end"
-                    android:src="@drawable/ic_android_black_48dp"/>
+                    style="@style/CardImage"/>
 
             </android.support.v7.widget.CardView>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:gravity="center">
+            style="@style/CardLayout">
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -145,18 +100,11 @@
                 style="@style/TypeCard">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="top|start"
-                    android:textSize="@dimen/text_size_card_header"
-                    android:text="@string/dummy"/>
+                    style="@style/CardTitle" />
 
                 <ImageView
                     android:id="@+id/biker_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|end"
-                    android:src="@drawable/ic_android_black_48dp"/>
+                    style="@style/CardImage"/>
 
             </android.support.v7.widget.CardView>
 
@@ -166,17 +114,10 @@
 
     <!--row3-->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        style="@style/RowLayout">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight="1"
-            android:gravity="center">
+            style="@style/CardLayout">
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -184,29 +125,18 @@
                 style="@style/TypeCard">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="top|start"
-                    android:textSize="@dimen/text_size_card_header"
-                    android:text="@string/dummy"/>
+                    style="@style/CardTitle" />
 
                 <ImageView
                     android:id="@+id/aged_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|end"
-                    android:src="@drawable/ic_android_black_48dp"/>
+                    style="@style/CardImage"/>
 
             </android.support.v7.widget.CardView>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:gravity="center">
+            style="@style/CardLayout">
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -214,18 +144,11 @@
                 style="@style/TypeCard">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="top|start"
-                    android:textSize="@dimen/text_size_card_header"
-                    android:text="@string/dummy"/>
+                    style="@style/CardTitle" />
 
                 <ImageView
                     android:id="@+id/add_new_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|end"
-                    android:src="@drawable/ic_android_black_48dp"/>
+                    style="@style/CardImage"/>
 
             </android.support.v7.widget.CardView>
 
