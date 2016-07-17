@@ -139,6 +139,7 @@ public class TypeDetailActivity extends AppCompatActivity {
             //slide.setDuration(0.3d);
             slide.excludeTarget(android.R.id.statusBarBackground, true);
             slide.excludeTarget(android.R.id.navigationBarBackground, true);
+            slide.excludeTarget(R.id.fab, true);
             getWindow().setEnterTransition(slide);
             getWindow().setReturnTransition(slide);
         }
@@ -149,8 +150,8 @@ public class TypeDetailActivity extends AppCompatActivity {
         int primaryDark = getResources().getColor(R.color.primary);
         int primary = getResources().getColor(R.color.primary_dark);
         //palette.getMutedColor(primary)
-        collapsingToolbar.setContentScrimColor(palette.getDarkMutedColor(primary));
-        collapsingToolbar.setStatusBarScrimColor(palette.getDarkMutedColor(primaryDark));
+        collapsingToolbar.setContentScrimColor(palette.getLightVibrantColor(primary));
+        collapsingToolbar.setStatusBarScrimColor(palette.getLightVibrantColor(primaryDark));
         updateBackground(fab, palette);
         supportStartPostponedEnterTransition();
     }

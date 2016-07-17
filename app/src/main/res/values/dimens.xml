@@ -27,4 +27,6 @@
     <dimen name="status_bar_height">25dp</dimen>
     <dimen name="header_image">160dp</dimen>
     <dimen name="parallax_header_image">240dp</dimen>
+    <dimen name="sheet_text_scrim_height_bottom">88dp</dimen>
+    <dimen name="sheet_text_scrim_height_top">88dp</dimen>
 </resources>

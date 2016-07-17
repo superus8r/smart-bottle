@@ -15,6 +15,13 @@ public class BodyType implements Parcelable {
     private int photo;
     private String description;
 
+    public BodyType (String name, int color, int photo) {
+
+        this.name = name;
+        this.color = color;
+        this.photo = photo;
+    }
+
     public static String getKEY() {
         return KEY;
     }
