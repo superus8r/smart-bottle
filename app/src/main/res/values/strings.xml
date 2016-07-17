@@ -52,6 +52,12 @@
     <string name="height">Height</string>
     <string name="name">Name</string>
     <string name="my_type">My Type</string>
+    <string name="general_user">General User</string>
+    <string name="body_builder">Body Builder</string>
+    <string name="runner">Runner</string>
+    <string name="biker">Biker</string>
+    <string name="aged">Aged</string>
+    <string name="add_new_type">Add New Type</string>
 
     <string-array name="sex_array">
         <item>Female</item>

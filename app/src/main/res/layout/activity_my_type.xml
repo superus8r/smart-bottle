@@ -38,11 +38,15 @@
                 <android.support.v7.widget.CardView
                     style="@style/TypeCard"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/general_user">
 
-                    <TextView style="@style/CardTitle" />
+                    <TextView style="@style/CardTitle"
+                        android:text="@string/general_user"/>
 
-                    <ImageView style="@style/CardImage" />
+                    <ImageView
+                        style="@style/CardImage"
+                        android:src="@drawable/general_user"/>
 
                 </android.support.v7.widget.CardView>
 
@@ -53,11 +57,14 @@
                 <android.support.v7.widget.CardView
                     style="@style/TypeCard"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/body_builder">
 
-                    <TextView style="@style/CardTitle" />
+                    <TextView style="@style/CardTitle"
+                        android:text="@string/body_builder"/>
 
-                    <ImageView style="@style/CardImage" />
+                    <ImageView style="@style/CardImage"
+                        android:src="@drawable/bodybuilder"/>
 
                 </android.support.v7.widget.CardView>
 
@@ -73,13 +80,16 @@
                 <android.support.v7.widget.CardView
                     style="@style/TypeCard"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/runner">
 
-                    <TextView style="@style/CardTitle" />
+                    <TextView style="@style/CardTitle"
+                        android:text="@string/runner"/>
 
                     <ImageView
                         android:id="@+id/runner_icon"
-                        style="@style/CardImage" />
+                        style="@style/CardImage"
+                        android:src="@drawable/runner"/>
 
                 </android.support.v7.widget.CardView>
 
@@ -90,13 +100,16 @@
                 <android.support.v7.widget.CardView
                     style="@style/TypeCard"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/biker">
 
-                    <TextView style="@style/CardTitle" />
+                    <TextView style="@style/CardTitle"
+                        android:text="@string/biker"/>
 
                     <ImageView
                         android:id="@+id/biker_icon"
-                        style="@style/CardImage" />
+                        style="@style/CardImage"
+                        android:src="@drawable/biker"/>
 
                 </android.support.v7.widget.CardView>
 
@@ -112,13 +125,16 @@
                 <android.support.v7.widget.CardView
                     style="@style/TypeCard"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/aged">
 
-                    <TextView style="@style/CardTitle" />
+                    <TextView style="@style/CardTitle"
+                        android:text="@string/aged"/>
 
                     <ImageView
                         android:id="@+id/aged_icon"
-                        style="@style/CardImage" />
+                        style="@style/CardImage"
+                        android:src="@drawable/aged"/>
 
                 </android.support.v7.widget.CardView>
 
@@ -129,13 +145,16 @@
                 <android.support.v7.widget.CardView
                     style="@style/TypeCard"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/primary">
 
-                    <TextView style="@style/CardTitle" />
+                    <TextView style="@style/CardTitle"
+                        android:text="@string/add_new_type" />
 
                     <ImageView
                         android:id="@+id/add_new_icon"
-                        style="@style/CardImage" />
+                        style="@style/CardImage"
+                        android:src="@drawable/ic_add_circle_outline_white_48dp"/>
 
                 </android.support.v7.widget.CardView>
 

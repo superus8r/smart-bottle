@@ -8,6 +8,13 @@
     <color name="secondary_text">#727272</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
+    <color name="white">#ffffff</color>
+
+    <color name="general_user">#FFC107</color>
+    <color name="body_builder">#C62828</color>
+    <color name="runner">#8BC34A</color>
+    <color name="biker">#00796B</color>
+    <color name="aged">#4CAF50</color>
 
     <color name="primary_light_old">#B3E5FC</color>
 </resources>
