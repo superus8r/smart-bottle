@@ -1,5 +1,7 @@
 package com.mpandg.mpandgbluetooth;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -9,7 +11,7 @@ import android.util.Log;
 
 public class Utils {
 
-    private static final String FLAG_FIRST_TIME_USE = "first_time";
+    public static final String FLAG_FIRST_TIME_USE = "first_time";
 
     /**
      * A general method to output debug messages in the log
@@ -93,6 +95,21 @@ public class Utils {
         return settings.getBoolean(tag, true);
     }
 
+    /**
+     *
+     * put a boolean value to sharedPrefs.
+     * @param context
+     * @param flag
+     */
+    @SuppressLint("CommitPrefEdits")
+    public static void setBooleanPreference(Context context, String key, boolean flag) {
+
+        SharedPreferences sharedPref = ((Activity) context).getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putBoolean(key, flag);
+        editor.commit();
+    }
+
     public static class InputFilterHex implements InputFilter {
 
         @Override
@@ -113,5 +130,10 @@ public class Utils {
     public static boolean isFirstTimeUse(Context context) {
 
         return getBooleanPrefence(context, FLAG_FIRST_TIME_USE);
+    }
+
+    public static void invalidateFirstTimeUse(Context context) {
+
+        setBooleanPreference(context, FLAG_FIRST_TIME_USE, true);
     }
 }
