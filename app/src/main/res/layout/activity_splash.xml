@@ -17,4 +17,13 @@
         android:contentDescription="@string/image"
         android:src="@drawable/splash"/>
 
+    <Button
+        android:id="@+id/bt_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="@string/register"
+        style="@style/RegistrationButton"
+        android:visibility="gone"/>
+
 </FrameLayout>

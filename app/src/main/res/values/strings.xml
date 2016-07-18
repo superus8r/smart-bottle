@@ -46,7 +46,7 @@
     <string name="need_clean_summary">Cleanup command view after sending</string>
     <string name="dummy">dummy</string>
     <string name="terminal">Terminal</string>
-    <string name="register">Registration</string>
+    <string name="registeration">Registration</string>
     <string name="age">Age</string>
     <string name="weight">Weight</string>
     <string name="height">Height</string>
@@ -81,6 +81,7 @@
     <string name="temperature">Temp</string>
     <string name="mass_of_water">Mass Of Water</string>
     <string name="heartbeat">Heartbeat</string>
+    <string name="register">Register</string>
 
 
     <string-array name="sex_array">

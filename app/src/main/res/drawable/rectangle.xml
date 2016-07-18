@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rectangle_clicked">
+    <corners android:radius="2.5dp"/>
+    <stroke android:width="2dp" android:color="@color/white" />
+    <solid android:color="@color/primary_dark" />
+</shape>

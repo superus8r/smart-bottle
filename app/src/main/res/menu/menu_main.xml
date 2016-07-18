@@ -9,7 +9,7 @@
     <item
         android:id="@+id/action_registration"
         app:showAsAction="never"
-        android:title="@string/register" />
+        android:title="@string/registeration" />
 
     <item
         android:id="@+id/action_my_type"
