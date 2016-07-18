@@ -75,8 +75,12 @@
     They should at least drink half of a glass water every hour.
     So Hoosh noosh suggest runners drink a glass of water based on the given program by the bottle application for 2 hours.
     Consuming every kc demands drinking 1 cc water so body can continue its metabolize.</string>
-
-
+    <string name="per_hour">Per Hour</string>
+    <string name="cup_of_water">Cup Of Water</string>
+    <string name="ibm">IBM</string>
+    <string name="temperature">Temp</string>
+    <string name="mass_of_water">Mass Of Water</string>
+    <string name="heartbeat">Heartbeat</string>
 
 
     <string-array name="sex_array">

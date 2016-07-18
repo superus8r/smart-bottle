@@ -33,6 +33,11 @@
         <item name="android:contentDescription">@string/image</item>
     </style>
 
+    <style name="CardDetailImage" parent="CardImage">
+        <item name="android:layout_width">@dimen/card_detail_image_width</item>
+        <item name="android:layout_height">@dimen/card_detail_image_width</item>
+    </style>
+
     <style name="CardTitle">
         <item name="android:layout_width">@dimen/card_text_width</item>
         <item name="android:layout_height">wrap_content</item>
@@ -42,6 +47,12 @@
         <item name="android:text">@string/dummy</item>
         <item name="android:textSize">@dimen/text_size_card_header</item>
         <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CardDetailTitle" parent="CardTitle">
+        <item name="android:layout_width">@dimen/card_detail_text_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_detail_card_header</item>
     </style>
 
     <style name="CardLayout">
@@ -70,4 +81,5 @@
         <item name="rippleColor">@android:color/white</item>
     </style>
 
+    <dimen name="card_detail_image_width">32dp</dimen>
 </resources>

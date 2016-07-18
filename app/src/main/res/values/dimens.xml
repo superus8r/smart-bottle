@@ -8,6 +8,7 @@
     <dimen name="text_input_layout_height">88dp</dimen>
     <dimen name="card_margin">8dp</dimen>
     <dimen name="text_size_card_header">18sp</dimen>
+    <dimen name="text_size_detail_card_header">12sp</dimen>
     <dimen name="card_horizontal_padding">16dp</dimen>
     <dimen name="card_vertical_padding">24dp</dimen>
     <dimen name="page_height">2000dp</dimen>
@@ -15,6 +16,7 @@
     <dimen name="mytype_header_height">128dp</dimen>
     <dimen name="card_image_width">64dp</dimen>
     <dimen name="card_text_width">64dp</dimen>
+    <dimen name="card_detail_text_width">32dp</dimen>
     <dimen name="card_height">140dp</dimen>
 
     <dimen name="spacing_xsmall">2dp</dimen>
