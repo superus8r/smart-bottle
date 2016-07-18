@@ -113,6 +113,7 @@ public class TypeDetailActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             getWindow().setStatusBarColor(getResources().getColor(bodyType.getColor()));
+            getWindow().setNavigationBarColor(getResources().getColor(R.color.biker));
         }
 
         fab.setOnClickListener(new View.OnClickListener() {

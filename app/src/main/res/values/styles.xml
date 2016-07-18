@@ -33,9 +33,14 @@
         <item name="android:contentDescription">@string/image</item>
     </style>
 
-    <style name="CardDetailImage" parent="CardImage">
-        <item name="android:layout_width">@dimen/card_detail_image_width</item>
-        <item name="android:layout_height">@dimen/card_detail_image_width</item>
+    <style name="CardImage.Small" parent="CardImage">
+        <item name="android:layout_width">@dimen/card_image_width_small</item>
+        <item name="android:layout_height">@dimen/card_image_width_small</item>
+    </style>
+
+    <style name="CardImage.Large" parent="CardImage">
+        <item name="android:layout_width">@dimen/card_image_width_large</item>
+        <item name="android:layout_height">@dimen/card_image_width_large</item>
     </style>
 
     <style name="CardTitle">
@@ -49,10 +54,16 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="CardDetailTitle" parent="CardTitle">
-        <item name="android:layout_width">@dimen/card_detail_text_width</item>
+    <style name="CardTitle.Small" parent="CardTitle">
+        <item name="android:layout_width">@dimen/card_text_width_small</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">@dimen/text_size_detail_card_header</item>
+        <item name="android:textSize">@dimen/text_size_card_header_small</item>
+    </style>
+
+    <style name="CardTitle.Large" parent="CardTitle">
+        <item name="android:layout_width">@dimen/card_text_width_large</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_detail_card_header_large</item>
     </style>
 
     <style name="CardLayout">
@@ -65,9 +76,13 @@
 
     <style name="RowLayout">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/card_height</item>
+        <item name="android:layout_height">0dp</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:layout_weight">1.3</item>
+    </style>
+
+    <style name="RowLayoutMain" parent="RowLayout">
+        <item name="android:layout_weight">1</item>
     </style>
 
     <style name="FabStyle">
@@ -81,5 +96,4 @@
         <item name="rippleColor">@android:color/white</item>
     </style>
 
-    <dimen name="card_detail_image_width">32dp</dimen>
 </resources>

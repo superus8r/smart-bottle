@@ -35,11 +35,11 @@
                 app:cardBackgroundColor="@color/per_hour">
 
                 <TextView
-                    style="@style/CardTitle.Small"
+                    style="@style/CardTitle.Large"
                     android:text="@string/per_hour" />
 
                 <ImageView
-                    style="@style/CardImage.Small"
+                    style="@style/CardImage.Large"
                     android:src="@drawable/per_hour" />
 
             </android.support.v7.widget.CardView>
@@ -54,11 +54,11 @@
                 app:cardBackgroundColor="@color/cup_of_water">
 
                 <TextView
-                    style="@style/CardTitle.Small"
+                    style="@style/CardTitle.Large"
                     android:text="@string/cup_of_water" />
 
                 <ImageView
-                    style="@style/CardImage.Small"
+                    style="@style/CardImage.Large"
                     android:src="@drawable/cup_of_water" />
 
             </android.support.v7.widget.CardView>
@@ -73,11 +73,11 @@
                 app:cardBackgroundColor="@color/ibm">
 
                 <TextView
-                    style="@style/CardTitle.Small"
+                    style="@style/CardTitle.Large"
                     android:text="@string/ibm" />
 
                 <ImageView
-                    style="@style/CardImage.Small"
+                    style="@style/CardImage.Large"
                     android:src="@drawable/ibm" />
 
             </android.support.v7.widget.CardView>
@@ -97,11 +97,11 @@
                 app:cardBackgroundColor="@color/temperature">
 
                 <TextView
-                    style="@style/CardTitle.Small"
+                    style="@style/CardTitle.Large"
                     android:text="@string/temperature" />
 
                 <ImageView
-                    style="@style/CardImage.Small"
+                    style="@style/CardImage.Large"
                     android:src="@drawable/temperature" />
 
             </android.support.v7.widget.CardView>
@@ -116,11 +116,11 @@
                 app:cardBackgroundColor="@color/mass_of_water">
 
                 <TextView
-                    style="@style/CardTitle.Small"
+                    style="@style/CardTitle.Large"
                     android:text="@string/mass_of_water" />
 
                 <ImageView
-                    style="@style/CardImage.Small"
+                    style="@style/CardImage.Large"
                     android:src="@drawable/mass_of_water" />
 
             </android.support.v7.widget.CardView>
@@ -135,11 +135,11 @@
                 app:cardBackgroundColor="@color/heartbeat">
 
                 <TextView
-                    style="@style/CardTitle.Small"
+                    style="@style/CardTitle.Large"
                     android:text="@string/heartbeat" />
 
                 <ImageView
-                    style="@style/CardImage.Small"
+                    style="@style/CardImage.Large"
                     android:src="@drawable/heartbeat" />
 
             </android.support.v7.widget.CardView>
