@@ -23,13 +23,7 @@
             android:label="@string/select_device"
             android:theme="@style/DialogTheme" />
         <activity android:name=".activity.RegistrationActivity" />
-        <activity android:name=".activity.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".activity.MainActivity" />
         <activity
             android:name=".activity.MyTypeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -37,7 +31,13 @@
             android:name=".activity.TypeDetailActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.SplashActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -9,6 +9,8 @@ import android.util.Log;
 
 public class Utils {
 
+    private static final String FLAG_FIRST_TIME_USE = "first_time";
+
     /**
      * A general method to output debug messages in the log
      */
@@ -106,5 +108,10 @@ public class Utils {
             }
             return null;
         }
+    }
+
+    public static boolean isFirstTimeUse(Context context) {
+
+        return getBooleanPrefence(context, FLAG_FIRST_TIME_USE);
     }
 }
