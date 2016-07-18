@@ -11,14 +11,12 @@ import android.util.Log;
 
 public class Utils {
 
-    public static final String FLAG_FIRST_TIME_USE = "first_time";
-
     /**
      * A general method to output debug messages in the log
      */
     public static void log(String message) {
         if (BuildConfig.DEBUG) {
-            if (message != null) Log.i(Const.TAG, message);
+            if (message != null) Log.i(Const.TERMINAL_TAG, message);
         }
     }
 
@@ -83,7 +81,7 @@ public class Utils {
      */
     public static String getPrefence(Context context, String item) {
         final SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
-        return settings.getString(item, Const.TAG);
+        return settings.getString(item, Const.TERMINAL_TAG);
     }
 
 
@@ -129,11 +127,11 @@ public class Utils {
 
     public static boolean isFirstTimeUse(Context context) {
 
-        return getBooleanPrefence(context, FLAG_FIRST_TIME_USE);
+        return getBooleanPrefence(context, Const.FLAG_FIRST_TIME_USE);
     }
 
     public static void invalidateFirstTimeUse(Context context) {
 
-        setBooleanPreference(context, FLAG_FIRST_TIME_USE, true);
+        setBooleanPreference(context, Const.FLAG_FIRST_TIME_USE, true);
     }
 }
