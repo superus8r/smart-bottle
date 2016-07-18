@@ -28,9 +28,18 @@
                 android:layout_width="@dimen/mytype_header_width"
                 android:layout_height="@dimen/mytype_header_height"
                 android:contentDescription="@string/image"
-                android:src="@drawable/my_type" />
+                android:src="@drawable/my_type_2" />
 
         </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/choose_prompt"
+            android:paddingBottom="@dimen/spacing_medium"
+            android:text="@string/mytype_header"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"/>
 
         <!--row1-->
         <LinearLayout style="@style/RowLayout">
