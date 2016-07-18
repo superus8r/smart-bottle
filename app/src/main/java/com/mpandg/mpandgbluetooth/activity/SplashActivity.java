@@ -40,6 +40,12 @@ public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == Const.REQUEST_CODE_REGISTRATION && resultCode == RESULT_OK) {
+
+            // the user has registered successfully; invalidate first time use and open main activity.
+            Utils.invalidateFirstTimeUse(this);
+            startActivity(new Intent(this, MainActivity.class));
+        }
     }
 }
