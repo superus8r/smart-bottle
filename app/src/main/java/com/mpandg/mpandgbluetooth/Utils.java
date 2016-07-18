@@ -100,11 +100,37 @@ public class Utils {
      * @param flag
      */
     @SuppressLint("CommitPrefEdits")
-    public static void setBooleanPreference(Context context, String key, boolean flag) {
+    public static void saveValue(Context context, String key, boolean flag) {
 
         SharedPreferences sharedPref = ((Activity) context).getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putBoolean(key, flag);
+        editor.commit();
+    }
+
+    /**
+     *
+     * put a string value to sharedPrefs.
+     */
+    @SuppressLint("CommitPrefEdits")
+    public static void saveValue(Context context, String key, String value) {
+
+        SharedPreferences sharedPref = ((Activity) context).getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString(key, value);
+        editor.commit();
+    }
+
+    /**
+     *
+     * put an integer value to sharedPrefs.
+     */
+    @SuppressLint("CommitPrefEdits")
+    public static void saveValue(Context context, String key, int value) {
+
+        SharedPreferences sharedPref = ((Activity) context).getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(key, value);
         editor.commit();
     }
 
@@ -132,6 +158,22 @@ public class Utils {
 
     public static void invalidateFirstTimeUse(Context context) {
 
-        setBooleanPreference(context, Const.FLAG_FIRST_TIME_USE, true);
+        saveValue(context, Const.FLAG_FIRST_TIME_USE, true);
+    }
+
+    public static void saveUserInfo(Context context, String name, String sex, int weight, int height, int age) {
+
+        // save user registration info in sharedPrefs.
+        saveValue(context, Const.KEY_USER_NAME, name);
+        saveValue(context, Const.KEY_USER_SEX, sex);
+        saveValue(context, Const.KEY_USER_WEIGHT, weight);
+        saveValue(context, Const.KEY_USER_HEIGHT, height);
+        saveValue(context, Const.KEY_USER_AGE, age);
+    }
+
+    public static void saveUserType(Context context, String type){
+
+        // save user type.
+        saveValue(context, Const.KEY_USER_TYPE, type);
     }
 }

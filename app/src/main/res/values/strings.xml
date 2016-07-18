@@ -82,6 +82,8 @@
     <string name="mass_of_water">Mass Of Water</string>
     <string name="heartbeat">Heartbeat</string>
     <string name="register">Register</string>
+    <string name="name_is_required">Name is required</string>
+    <string name="done">Done</string>
 
 
     <string-array name="sex_array">

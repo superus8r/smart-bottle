@@ -29,6 +29,7 @@
             android:orientation="horizontal">
 
             <android.support.design.widget.TextInputLayout
+                android:id="@+id/layout_name"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/text_input_layout_height"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
@@ -36,8 +37,10 @@
                 android:gravity="center">
 
                 <EditText
+                    android:id="@+id/et_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
                     android:hint="@string/name"/>
 
             </android.support.design.widget.TextInputLayout>
@@ -52,38 +55,46 @@
         </LinearLayout>
 
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_weight"
             android:layout_width="match_parent"
             android:layout_height="@dimen/text_input_layout_height"
             android:gravity="center"
             app:errorEnabled="true">
 
             <EditText
+                android:id="@+id/et_weight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="number"
                 android:hint="@string/weight" />
 
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_height"
             android:layout_width="match_parent"
             android:layout_height="@dimen/text_input_layout_height"
             android:gravity="center"
             app:errorEnabled="true">
 
             <EditText
+                android:id="@+id/et_height"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="number"
                 android:hint="@string/height" />
 
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_age"
             android:layout_width="match_parent"
             android:layout_height="@dimen/text_input_layout_height"
             android:gravity="center"
             app:errorEnabled="true">
 
             <EditText
+                android:id="@+id/et_age"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/age" />
