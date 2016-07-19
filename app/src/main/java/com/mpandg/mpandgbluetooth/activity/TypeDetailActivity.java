@@ -124,9 +124,6 @@ public class TypeDetailActivity extends AppCompatActivity {
 
                 // fab has been pressed.
 
-                // save the body type and close the activity with RESULT_OK.
-                Utils.saveUserType(TypeDetailActivity.this, bodyType.getName());
-
                 // set the selected type as data of the activity result.
                 Intent data = new Intent();
                 data.putExtra(Const.KEY_USER_TYPE, bodyType.getName());

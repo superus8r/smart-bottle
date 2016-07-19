@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.mpandg.mpandgbluetooth.Const;
 import com.mpandg.mpandgbluetooth.R;
+import com.mpandg.mpandgbluetooth.Utils;
 import com.mpandg.mpandgbluetooth.model.BodyType;
 
 public class MyTypeActivity extends AppCompatActivity implements View.OnClickListener{
@@ -79,7 +80,10 @@ public class MyTypeActivity extends AppCompatActivity implements View.OnClickLis
 
         if (requestCode == Const.REQUEST_CODE_TYPE_DETAIL && resultCode == RESULT_OK) {
 
-
+            // save the body type chosen by user and close the activity with RESULT_OK.
+            Utils.saveUserType(this, data.getStringExtra(Const.KEY_USER_TYPE));
+            setResult(RESULT_OK);
+            finish();
         }
     }
 }

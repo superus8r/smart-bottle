@@ -79,32 +79,43 @@ public class Utils {
     /**
      * get preferences.
      */
-    public static String getPrefence(Context context, String item) {
+    public static String getPreference(Context context, String item) {
         final SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
         return settings.getString(item, Const.TERMINAL_TAG);
     }
 
+    public static String getStringPref (Context context, String key) {
+
+        SharedPreferences prefs = ((Activity) context).getPreferences(Context.MODE_PRIVATE);
+        return prefs.getString(key, "");
+    }
 
     /**
      * getting a boolean flag from the settings.
      */
-    public static boolean getBooleanPrefence(Context context, String tag) {
+    public static boolean getBooleanPreference(Context context, String key) {
         final SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
-        return settings.getBoolean(tag, true);
+        //return settings.getBoolean(key, true);
+
+        return settings.getBoolean(key, true);
+    }
+
+    public static boolean getBooleanPref (Context context, String key) {
+
+        SharedPreferences prefs = ((Activity) context).getPreferences(Context.MODE_PRIVATE);
+        return prefs.getBoolean(key, true);
     }
 
     /**
      *
      * put a boolean value to sharedPrefs.
-     * @param context
-     * @param flag
      */
     @SuppressLint("CommitPrefEdits")
-    public static void saveValue(Context context, String key, boolean flag) {
+    public static void saveValue(Context context, String key, boolean value) {
 
         SharedPreferences sharedPref = ((Activity) context).getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putBoolean(key, flag);
+        editor.putBoolean(key, value);
         editor.commit();
     }
 
@@ -153,12 +164,12 @@ public class Utils {
 
     public static boolean isFirstTimeUse(Context context) {
 
-        return getBooleanPrefence(context, Const.FLAG_FIRST_TIME_USE);
+        return getBooleanPref(context, Const.FLAG_FIRST_TIME_USE);
     }
 
     public static void invalidateFirstTimeUse(Context context) {
 
-        saveValue(context, Const.FLAG_FIRST_TIME_USE, true);
+        saveValue(context, Const.FLAG_FIRST_TIME_USE, false);
     }
 
     public static void saveUserInfo(Context context, String name, String sex, int weight, int height, int age) {
