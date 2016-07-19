@@ -13,8 +13,6 @@ import com.mpandg.mpandgbluetooth.Utils;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private Button btRegister;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +53,7 @@ public class SplashActivity extends AppCompatActivity {
         } else {
 
             // user has not registered, keep this activity and show registration button.
-            btRegister = (Button) findViewById(R.id.bt_register);
+            Button btRegister = (Button) findViewById(R.id.bt_register);
             btRegister.setVisibility(View.VISIBLE);
             btRegister.setOnClickListener(new View.OnClickListener() {
                 @Override

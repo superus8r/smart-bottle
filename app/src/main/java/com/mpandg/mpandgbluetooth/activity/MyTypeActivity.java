@@ -1,10 +1,12 @@
 package com.mpandg.mpandgbluetooth.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
+import com.mpandg.mpandgbluetooth.Const;
 import com.mpandg.mpandgbluetooth.R;
 import com.mpandg.mpandgbluetooth.model.BodyType;
 
@@ -38,7 +40,6 @@ public class MyTypeActivity extends AppCompatActivity implements View.OnClickLis
 
     /**
      * Handle cardView clicks to open corresponding activities.
-     * @param view
      */
     @Override
     public void onClick(View view) {
@@ -70,6 +71,15 @@ public class MyTypeActivity extends AppCompatActivity implements View.OnClickLis
                 bodyType = new BodyType(getResources().getString(R.string.add_new_type), R.color.primary, R.drawable.ic_add_circle_outline_white_48dp);
                 TypeDetailActivity.navigate(this, view.findViewById(R.id.iv_add_new), bodyType);
                 break;
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == Const.REQUEST_CODE_TYPE_DETAIL && resultCode == RESULT_OK) {
+
+
         }
     }
 }

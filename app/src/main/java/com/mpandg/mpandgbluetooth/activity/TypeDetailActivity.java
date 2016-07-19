@@ -5,6 +5,7 @@ import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
@@ -12,24 +13,22 @@ import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.transition.Slide;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
-import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.mpandg.mpandgbluetooth.Const;
 import com.mpandg.mpandgbluetooth.R;
+import com.mpandg.mpandgbluetooth.Utils;
 import com.mpandg.mpandgbluetooth.model.BodyType;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
-
-import javax.sql.DataSource;
 
 public class TypeDetailActivity extends AppCompatActivity {
 
@@ -45,7 +44,10 @@ public class TypeDetailActivity extends AppCompatActivity {
         intent.putExtra(BodyType.KEY, bodyType);
 
         Bundle bundle = ActivityOptionsCompat.makeSceneTransitionAnimation(activity, transitionImage, EXTRA_IMAGE).toBundle();
-        ActivityCompat.startActivity(activity, intent, bundle);
+
+        // start the activity with animations.
+        //ActivityCompat.startActivity(activity, intent, bundle);
+        ActivityCompat.startActivityForResult(activity, intent, Const.REQUEST_CODE_TYPE_DETAIL, bundle);
     }
 
     @SuppressWarnings("deprecation")
@@ -122,11 +124,16 @@ public class TypeDetailActivity extends AppCompatActivity {
 
                 // fab has been pressed.
 
-                // add the bodyType item to card
-//                bodyType.addToCart(dataSource);
+                // save the body type and close the activity with RESULT_OK.
+                Utils.saveUserType(TypeDetailActivity.this, bodyType.getName());
 
-                // show a snack telling the user that the item is added to cart.
-//                Tools.snack(DetailActivity.this, R.string.added_to_cart);
+                // set the selected type as data of the activity result.
+                Intent data = new Intent();
+                data.putExtra(Const.KEY_USER_TYPE, bodyType.getName());
+
+                // set the result and its data and finish the activity.
+                setResult(RESULT_OK, data);
+                finish();
             }
         });
 
