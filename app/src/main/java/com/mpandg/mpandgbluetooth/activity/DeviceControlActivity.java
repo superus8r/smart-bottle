@@ -338,7 +338,17 @@ public class DeviceControlActivity extends BaseActivity {
 
             if (isConnected()) {
                 connector.write(command.getBytes());
-                appendLog(command, hexMode, true, needClean);
+
+                // check if we're in Terminal view.
+                try {
+
+                    // show the log, if we're in Terminal.
+                    appendLog(command, hexMode, true, needClean);
+                } catch (NullPointerException npe) {
+
+                    // we're not in Terminal.
+                    npe.printStackTrace();
+                }
             }
         }
     }

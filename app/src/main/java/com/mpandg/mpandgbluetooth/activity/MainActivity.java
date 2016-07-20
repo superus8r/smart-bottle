@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.mpandg.mpandgbluetooth.R;
 
@@ -17,6 +19,16 @@ public class MainActivity extends DeviceControlActivity {
         setContentView(R.layout.activity_main);
 
         setTitle(R.string.app_name);
+
+        ImageView bottle = (ImageView) findViewById(R.id.bottle);
+        bottle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                // refresh bottle level whenever it's being clicked.
+                sendCommand("0");
+            }
+        });
     }
 
     @Override
