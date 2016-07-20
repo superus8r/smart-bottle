@@ -44,6 +44,7 @@
         android:layout_marginTop="@dimen/dialog_header_padding"
         android:layout_marginBottom="@dimen/dialog_header_padding"
         android:text="@string/search_message"
+        android:background="@drawable/btn_bg"
         android:textColor="@color/primary_text"/>
 
     <TextView
