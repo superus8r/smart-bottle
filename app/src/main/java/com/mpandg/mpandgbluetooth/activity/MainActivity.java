@@ -1,5 +1,6 @@
 package com.mpandg.mpandgbluetooth.activity;
 
+import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,12 +9,14 @@ import android.view.MenuItem;
 
 import com.mpandg.mpandgbluetooth.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends DeviceControlActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        setTitle(R.string.app_name);
     }
 
     @Override
@@ -27,6 +30,16 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
+
+            case R.id.menu_search:
+                if (super.isAdapterReady()) {
+                    if (isConnected()) stopConnection();
+                    else startDeviceListActivity();
+                } else {
+                    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                    startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+                }
+                return true;
 
             case R.id.action_terminal:
                 startActivity(new Intent(this, DeviceControlActivity.class));

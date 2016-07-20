@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mpandg.mpandgbluetooth.Const;
 import com.mpandg.mpandgbluetooth.R;
@@ -33,7 +34,7 @@ import java.lang.ref.WeakReference;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public final class DeviceControlActivity extends BaseActivity {
+public class DeviceControlActivity extends BaseActivity {
     private static final String DEVICE_NAME = "DEVICE_NAME";
     private static final String LOG = "LOG";
 
@@ -86,7 +87,11 @@ public final class DeviceControlActivity extends BaseActivity {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_SEND) {
-                    sendCommand(null);
+
+                    // create a temporary null view to clarify overridden method.
+                    View temp = null;
+                    //noinspection ConstantConditions
+                    sendCommand(temp);
                     return true;
                 }
                 return false;
@@ -98,7 +103,10 @@ public final class DeviceControlActivity extends BaseActivity {
                 if (event.getAction() == KeyEvent.ACTION_DOWN) {
                     switch (keyCode) {
                         case KeyEvent.KEYCODE_ENTER:
-                            sendCommand(null);
+                            // create a temporary null view to clarify overridden method.
+                            View temp = null;
+                            //noinspection ConstantConditions
+                            sendCommand(temp);
                             return true;
                         default:
                             break;
@@ -123,7 +131,7 @@ public final class DeviceControlActivity extends BaseActivity {
     /**
      * check the connection.
      */
-    private boolean isConnected() {
+    protected boolean isConnected() {
         return (connector != null) && (connector.getState() == DeviceConnector.STATE_CONNECTED);
     }
 
@@ -131,7 +139,7 @@ public final class DeviceControlActivity extends BaseActivity {
     /**
      * disconnect.
      */
-    private void stopConnection() {
+    protected void stopConnection() {
         if (connector != null) {
             connector.stop();
             connector = null;
@@ -143,7 +151,7 @@ public final class DeviceControlActivity extends BaseActivity {
     /**
      * The list of devices to connect.
      */
-    private void startDeviceListActivity() {
+    protected void startDeviceListActivity() {
         stopConnection();
         Intent serverIntent = new Intent(this, DeviceListActivity.class);
         startActivityForResult(serverIntent, REQUEST_CONNECT_DEVICE);
@@ -234,7 +242,7 @@ public final class DeviceControlActivity extends BaseActivity {
     /**
      * get command endings.
      */
-    private String getCommandEnding() {
+    protected String getCommandEnding() {
         String result = Utils.getPreference(this, getString(R.string.pref_commands_ending));
         switch (result) {
             case "\\r\\n":
@@ -280,7 +288,7 @@ public final class DeviceControlActivity extends BaseActivity {
     /**
      * Establishing a connection with the device.
      */
-    private void setupConnector(BluetoothDevice connectedDevice) {
+    protected void setupConnector(BluetoothDevice connectedDevice) {
         stopConnection();
         try {
             String emptyName = getString(R.string.empty_device_name);
@@ -320,6 +328,20 @@ public final class DeviceControlActivity extends BaseActivity {
         }
     }
 
+    /**
+     *
+     * Send a string command to device.
+     * @param command - Command string to send to device.
+     */
+    public void sendCommand(String command) {
+        if (command != null) {
+
+            if (isConnected()) {
+                connector.write(command.getBytes());
+                appendLog(command, hexMode, true, needClean);
+            }
+        }
+    }
 
     /**
      * Adding a response to the log
@@ -401,6 +423,9 @@ public final class DeviceControlActivity extends BaseActivity {
 
                             // listen to module to recieve messages.
                             activity.appendLog(readMessage, false, false, activity.needClean);
+
+                            //Log.i(Const.TERMINAL_TAG, "received:" + readMessage);
+                            //Toast.makeText(activity.getApplicationContext(), "message:" + readMessage, Toast.LENGTH_SHORT).show();
                         }
                         break;
 
