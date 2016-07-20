@@ -398,8 +398,9 @@ public final class DeviceControlActivity extends BaseActivity {
                     case MESSAGE_READ:
                         final String readMessage = (String) msg.obj;
                         if (readMessage != null) {
+
+                            // listen to module to recieve messages.
                             activity.appendLog(readMessage, false, false, activity.needClean);
-                            Log.i(Const.TERMINAL_TAG, "recieved message from module");
                         }
                         break;
 

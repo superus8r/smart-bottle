@@ -36,6 +36,7 @@
         android:clickable="false"
         android:enabled="true"
         android:scrollbars="vertical"
+        android:background="@color/cardview_dark_background"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
 
