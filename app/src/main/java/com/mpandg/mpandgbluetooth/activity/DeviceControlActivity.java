@@ -13,6 +13,7 @@ import android.support.v7.app.ActionBar;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +22,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.mpandg.mpandgbluetooth.Const;
 import com.mpandg.mpandgbluetooth.R;
 import com.mpandg.mpandgbluetooth.Utils;
 import com.mpandg.mpandgbluetooth.bluetooth.DeviceConnector;
@@ -397,6 +399,7 @@ public final class DeviceControlActivity extends BaseActivity {
                         final String readMessage = (String) msg.obj;
                         if (readMessage != null) {
                             activity.appendLog(readMessage, false, false, activity.needClean);
+                            Log.i(Const.TERMINAL_TAG, "recieved message from module");
                         }
                         break;
 

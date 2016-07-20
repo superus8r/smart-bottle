@@ -43,7 +43,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dialog_header_padding"
         android:layout_marginBottom="@dimen/dialog_header_padding"
-        android:text="@string/search_message" />
+        android:text="@string/search_message"
+        android:textColor="@color/primary_text"/>
 
     <TextView
         android:id="@+id/title_new_devices"
