@@ -3,12 +3,13 @@ package com.mpandg.mpandgbluetooth.activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.mpandg.mpandgbluetooth.Const;
 import com.mpandg.mpandgbluetooth.R;
 
 public class MainActivity extends DeviceControlActivity {
@@ -26,7 +27,7 @@ public class MainActivity extends DeviceControlActivity {
             public void onClick(View view) {
 
                 // refresh bottle level whenever it's being clicked.
-                sendCommand("0");
+                sendCommand(Const.BOTTLE_REQUEST_LEVEL);
             }
         });
     }
@@ -73,5 +74,6 @@ public class MainActivity extends DeviceControlActivity {
     @Override
     public void receive(String message) {
         super.receive(message);
+        Toast.makeText(this, "message:" + message, Toast.LENGTH_SHORT).show();
     }
 }

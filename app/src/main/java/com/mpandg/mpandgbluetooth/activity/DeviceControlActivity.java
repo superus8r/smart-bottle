@@ -470,6 +470,5 @@ public class DeviceControlActivity extends BaseActivity {
     public void receive(String message) {
 
         Log.i(Const.TERMINAL_TAG, "received:" + message);
-        //Toast.makeText(activity.getApplicationContext(), "message:" + readMessage, Toast.LENGTH_SHORT).show();
     }
 }

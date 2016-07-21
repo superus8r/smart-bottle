@@ -1,5 +1,7 @@
 package com.mpandg.mpandgbluetooth;
 
+import android.view.View;
+
 public class Const {
     public static final String FLAG_FIRST_TIME_USE = "first_time";
     public static final int REQUEST_CODE_REGISTRATION = 1;
@@ -12,4 +14,5 @@ public class Const {
     public static final String KEY_USER_HEIGHT = "user_height";
     public static final String KEY_USER_AGE = "user_age";
     public static final String KEY_USER_TYPE = "user_type";
+    public static final String BOTTLE_REQUEST_LEVEL = "L";
 }
