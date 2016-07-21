@@ -461,6 +461,12 @@ public class DeviceControlActivity extends BaseActivity {
         }
     }
 
+    /**
+     *
+     * Override this method in child classes to get the messages
+     * delivered from bt module.
+     * @param message - delivered message from module.
+     */
     public void receive(String message) {
 
         Log.i(Const.TERMINAL_TAG, "received:" + message);
