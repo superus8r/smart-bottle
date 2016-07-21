@@ -329,8 +329,8 @@ public class DeviceControlActivity extends BaseActivity {
     }
 
     /**
-     *
      * Send a string command to device.
+     *
      * @param command - Command string to send to device.
      */
     public void sendCommand(String command) {
@@ -429,13 +429,19 @@ public class DeviceControlActivity extends BaseActivity {
 
                     case MESSAGE_READ:
                         final String readMessage = (String) msg.obj;
-                        if (readMessage != null) {
+                        // check if we're in Terminal view.
+                        try {
+                            // show the log, if we're in Terminal.
+                            if (readMessage != null) {
 
-                            // listen to module to recieve messages.
-                            activity.appendLog(readMessage, false, false, activity.needClean);
-
-                            //Log.i(Const.TERMINAL_TAG, "received:" + readMessage);
-                            //Toast.makeText(activity.getApplicationContext(), "message:" + readMessage, Toast.LENGTH_SHORT).show();
+                                // listen to module to recieve messages.
+                                activity.appendLog(readMessage, false, false, activity.needClean);
+                                activity.receive(readMessage);
+                            }
+                            break;
+                        } catch (NullPointerException npe) {
+                            // we're not in Terminal.
+                            npe.printStackTrace();
                         }
                         break;
 
@@ -453,5 +459,11 @@ public class DeviceControlActivity extends BaseActivity {
                 }
             }
         }
+    }
+
+    public void receive(String message) {
+
+        Log.i(Const.TERMINAL_TAG, "received:" + message);
+        //Toast.makeText(activity.getApplicationContext(), "message:" + readMessage, Toast.LENGTH_SHORT).show();
     }
 }
