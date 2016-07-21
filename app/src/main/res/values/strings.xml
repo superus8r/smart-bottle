@@ -87,6 +87,10 @@
     <string name="zero">0</string>
     <string name="minus">-</string>
     <string name="plus">+</string>
+    <string name="your_ibm">Your IBM:</string>
+    <string name="overweight">overweight</string>
+    <string name="underweight">underweight</string>
+    <string name="default_prefs">default_prefs</string>
 
 
     <string-array name="sex_array">

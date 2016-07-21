@@ -79,30 +79,36 @@ public class Utils {
     /**
      * get preferences.
      */
-    public static String getPreference(Context context, String item) {
-        final SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
-        return settings.getString(item, Const.TERMINAL_TAG);
-    }
+//    public static String getPreference(Context context, String item) {
+//        final SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
+//        return settings.getString(item, Const.TERMINAL_TAG);
+//    }
 
     public static String getStringPref (Context context, String key) {
 
-        SharedPreferences prefs = ((Activity) context).getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences prefs = context.getSharedPreferences(context.getResources().getString(R.string.default_prefs), Context.MODE_PRIVATE);
         return prefs.getString(key, "");
+    }
+
+    public static int getIntegerPref (Context context, String key) {
+
+        SharedPreferences prefs = context.getSharedPreferences(context.getResources().getString(R.string.default_prefs), Context.MODE_PRIVATE);
+        return prefs.getInt(key, 0);
     }
 
     /**
      * getting a boolean flag from the settings.
      */
-    public static boolean getBooleanPreference(Context context, String key) {
-        final SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
-        //return settings.getBoolean(key, true);
-
-        return settings.getBoolean(key, true);
-    }
+//    public static boolean getBooleanPreference(Context context, String key) {
+//        final SharedPreferences settings = context.getSharedPreferences(context.getResources().getString(R.string.default_prefs), Context.MODE_PRIVATE);
+//        //return settings.getBoolean(key, true);
+//
+//        return settings.getBoolean(key, true);
+//    }
 
     public static boolean getBooleanPref (Context context, String key) {
 
-        SharedPreferences prefs = ((Activity) context).getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences prefs = context.getSharedPreferences(context.getResources().getString(R.string.default_prefs), Context.MODE_PRIVATE);
         return prefs.getBoolean(key, true);
     }
 
@@ -113,7 +119,7 @@ public class Utils {
     @SuppressLint("CommitPrefEdits")
     public static void saveValue(Context context, String key, boolean value) {
 
-        SharedPreferences sharedPref = ((Activity) context).getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = context.getSharedPreferences(context.getResources().getString(R.string.default_prefs), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putBoolean(key, value);
         editor.commit();
@@ -126,7 +132,7 @@ public class Utils {
     @SuppressLint("CommitPrefEdits")
     public static void saveValue(Context context, String key, String value) {
 
-        SharedPreferences sharedPref = ((Activity) context).getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = context.getSharedPreferences(context.getResources().getString(R.string.default_prefs), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString(key, value);
         editor.commit();
@@ -139,7 +145,7 @@ public class Utils {
     @SuppressLint("CommitPrefEdits")
     public static void saveValue(Context context, String key, int value) {
 
-        SharedPreferences sharedPref = ((Activity) context).getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = context.getSharedPreferences(context.getResources().getString(R.string.default_prefs), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putInt(key, value);
         editor.commit();
@@ -186,5 +192,14 @@ public class Utils {
 
         // save user type.
         saveValue(context, Const.KEY_USER_TYPE, type);
+    }
+
+    public static double evaluateIbm(Context context) {
+
+        int weight = getIntegerPref(context, Const.KEY_USER_WEIGHT);
+        int height = getIntegerPref(context, Const.KEY_USER_HEIGHT);
+
+        // x=weight/height^2.
+        return weight / Math.pow(height, 2.0);
     }
 }

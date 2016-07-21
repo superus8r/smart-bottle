@@ -7,10 +7,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mpandg.mpandgbluetooth.Const;
 import com.mpandg.mpandgbluetooth.R;
+import com.mpandg.mpandgbluetooth.Utils;
 
 public class MainActivity extends DeviceControlActivity {
 
@@ -30,6 +32,12 @@ public class MainActivity extends DeviceControlActivity {
                 sendCommand(Const.BOTTLE_REQUEST_LEVEL);
             }
         });
+
+        TextView ibmTv = (TextView) findViewById(R.id.tv_ibm);
+        double ibm = Utils.evaluateIbm(this);
+        String ibmDescription = getResources().getString(R.string.your_ibm) + "\n" + ibm + "\n" +
+                (ibm > 0 ? getResources().getString(R.string.overweight) : getResources().getString(R.string.underweight));
+        ibmTv.setText(ibmDescription);
     }
 
     @Override

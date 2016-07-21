@@ -73,6 +73,7 @@
                 app:cardBackgroundColor="@color/ibm">
 
                 <TextView
+                    android:id="@+id/tv_ibm"
                     style="@style/CardTitle.Small"
                     android:text="@string/ibm" />
 

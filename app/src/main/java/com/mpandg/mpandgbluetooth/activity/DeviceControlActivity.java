@@ -219,7 +219,8 @@ public class DeviceControlActivity extends BaseActivity {
         super.onStart();
 
         // hex mode
-        final String mode = Utils.getPreference(this, getString(R.string.pref_commands_mode));
+        //final String mode = Utils.getPreference(this, getString(R.string.pref_commands_mode));
+        final String mode = Utils.getStringPref(this, getString(R.string.pref_commands_mode));
         this.hexMode = mode.equals("HEX");
         if (hexMode) {
             commandEditText.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS | InputType.TYPE_TEXT_FLAG_CAP_CHARACTERS);
@@ -233,9 +234,12 @@ public class DeviceControlActivity extends BaseActivity {
         this.command_ending = getCommandEnding();
 
         // display format of the log command
-        this.show_timings = Utils.getBooleanPreference(this, getString(R.string.pref_log_timing));
-        this.show_direction = Utils.getBooleanPreference(this, getString(R.string.pref_log_direction));
-        this.needClean = Utils.getBooleanPreference(this, getString(R.string.pref_need_clean));
+//        this.show_timings = Utils.getBooleanPreference(this, getString(R.string.pref_log_timing));
+        this.show_timings = Utils.getBooleanPref(this, getString(R.string.pref_log_timing));
+//        this.show_direction = Utils.getBooleanPreference(this, getString(R.string.pref_log_direction));
+        this.show_direction = Utils.getBooleanPref(this, getString(R.string.pref_log_direction));
+//        this.needClean = Utils.getBooleanPreference(this, getString(R.string.pref_need_clean));
+        this.needClean = Utils.getBooleanPref(this, getString(R.string.pref_need_clean));
     }
 
 
@@ -243,7 +247,8 @@ public class DeviceControlActivity extends BaseActivity {
      * get command endings.
      */
     protected String getCommandEnding() {
-        String result = Utils.getPreference(this, getString(R.string.pref_commands_ending));
+        //String result = Utils.getPreference(this, getString(R.string.pref_commands_ending));
+        String result = Utils.getStringPref(this, getString(R.string.pref_commands_ending));
         switch (result) {
             case "\\r\\n":
                 result = "\r\n";
