@@ -102,4 +102,12 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="CountSelectorStyle">
+        <item name="android:layout_margin">24dp</item>
+    </style>
+
+    <style name="CountSelectorTextStyle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
 </resources>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CountSelectorStyle"
     android:layout_width="108dp"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_alignParentEnd="true"
     android:layout_alignParentRight="true"
     android:orientation="horizontal">
@@ -17,6 +17,7 @@
         tools:ignore="RtlHardcoded,UnusedAttribute">
 
         <TextView
+            style="@style/CountSelectorTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -37,6 +38,7 @@
         tools:ignore="RtlHardcoded,UnusedAttribute">
 
         <TextView
+            style="@style/CountSelectorTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -58,6 +60,7 @@
 
         <TextView
             android:id="@+id/count"
+            style="@style/CountSelectorTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
