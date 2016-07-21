@@ -69,4 +69,9 @@ public class MainActivity extends DeviceControlActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    @Override
+    public void receive(String message) {
+        super.receive(message);
+    }
 }

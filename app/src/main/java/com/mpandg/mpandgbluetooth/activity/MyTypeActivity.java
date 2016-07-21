@@ -49,27 +49,27 @@ public class MyTypeActivity extends AppCompatActivity implements View.OnClickLis
         switch (view.getId()) {
             case R.id.card_general_user:
                 // send the corresponding type for navigation purposes.
-                bodyType = new BodyType(getResources().getString(R.string.general_user), R.color.general_user, R.drawable.general_user);
+                bodyType = new BodyType(this, getResources().getString(R.string.general_user), R.color.general_user, R.drawable.general_user, R.string.lorem_ipsum);
                 TypeDetailActivity.navigate(this, view.findViewById(R.id.iv_general_user), bodyType);
                 break;
             case R.id.card_body_builder:
-                bodyType = new BodyType(getResources().getString(R.string.body_builder), R.color.body_builder, R.drawable.bodybuilder);
+                bodyType = new BodyType(this, getResources().getString(R.string.body_builder), R.color.body_builder, R.drawable.bodybuilder, R.string.bodybuilder_detail);
                 TypeDetailActivity.navigate(this, view.findViewById(R.id.iv_body_builder), bodyType);
                 break;
             case R.id.card_runner:
-                bodyType = new BodyType(getResources().getString(R.string.runner), R.color.runner, R.drawable.runner);
+                bodyType = new BodyType(this, getResources().getString(R.string.runner), R.color.runner, R.drawable.runner, R.string.runner_detail);
                 TypeDetailActivity.navigate(this, view.findViewById(R.id.iv_runner), bodyType);
                 break;
             case R.id.card_biker:
-                bodyType = new BodyType(getResources().getString(R.string.biker), R.color.biker, R.drawable.biker);
+                bodyType = new BodyType(this, getResources().getString(R.string.biker), R.color.biker, R.drawable.biker, R.string.biker_detail);
                 TypeDetailActivity.navigate(this, view.findViewById(R.id.iv_biker), bodyType);
                 break;
             case R.id.card_aged:
-                bodyType = new BodyType(getResources().getString(R.string.aged), R.color.aged, R.drawable.aged);
+                bodyType = new BodyType(this, getResources().getString(R.string.aged), R.color.aged, R.drawable.aged, R.string.lorem_ipsum);
                 TypeDetailActivity.navigate(this, view.findViewById(R.id.iv_aged), bodyType);
                 break;
             case R.id.card_add_type:
-                bodyType = new BodyType(getResources().getString(R.string.add_new_type), R.color.primary, R.drawable.ic_add_circle_outline_white_48dp);
+                bodyType = new BodyType(this, getResources().getString(R.string.add_new_type), R.color.primary, R.drawable.ic_add_circle_outline_white_48dp, R.string.lorem_ipsum);
                 TypeDetailActivity.navigate(this, view.findViewById(R.id.iv_add_new), bodyType);
                 break;
         }

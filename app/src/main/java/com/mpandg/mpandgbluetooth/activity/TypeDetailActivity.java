@@ -37,6 +37,8 @@ public class TypeDetailActivity extends AppCompatActivity {
     private ImageView image;
     private CollapsingToolbarLayout collapsingToolbar;
     private FloatingActionButton fab;
+    private TextView description;
+
     private BodyType bodyType;
 
     public static void navigate(AppCompatActivity activity, View transitionImage, BodyType bodyType) {
@@ -69,6 +71,9 @@ public class TypeDetailActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         fab = (FloatingActionButton) findViewById(R.id.fab);
 
+        description = (TextView) findViewById(R.id.description);
+        description.setText(bodyType.getDescription());
+
         collapsingToolbar.setTitle(bodyType.getName());
         //collapsingToolbar.setCollapsedTitleTextColor(getResources().getColor(bodyType.getColor()));
         //collapsingToolbar.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
@@ -93,14 +98,6 @@ public class TypeDetailActivity extends AppCompatActivity {
 
             }
         });
-
-        TextView title = (TextView) findViewById(R.id.title);
-        assert title != null;
-        //title.setText(bodyType.getName());
-
-        TextView price = (TextView) findViewById(R.id.comment);
-        assert price != null;
-        //price.setText(bodyType.getPrice());
 
         assert toolbar != null;
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_arrow_back_white_24dp));

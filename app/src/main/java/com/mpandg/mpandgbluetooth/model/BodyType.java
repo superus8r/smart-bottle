@@ -1,5 +1,6 @@
 package com.mpandg.mpandgbluetooth.model;
 
+import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -15,11 +16,12 @@ public class BodyType implements Parcelable {
     private int photo;
     private String description;
 
-    public BodyType (String name, int color, int photo) {
+    public BodyType (Context context, String name, int color, int photo, int descriptionResId) {
 
         this.name = name;
         this.color = color;
         this.photo = photo;
+        this.description = context.getResources().getString(descriptionResId);
     }
 
     public static String getKEY() {
