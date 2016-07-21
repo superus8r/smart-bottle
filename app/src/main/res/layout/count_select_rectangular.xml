@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="108dp"
+    android:layout_height="match_parent"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/minus"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="left|center_vertical"
+        android:background="@drawable/rectangle"
+        tools:ignore="RtlHardcoded,UnusedAttribute">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingRight="16dp"
+            android:text="@string/minus"
+            android:textSize="28sp"
+            tools:ignore="RtlSymmetry" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/plus"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="right|center_vertical"
+        android:background="@drawable/rectangle"
+        android:gravity="right|center"
+        tools:ignore="RtlHardcoded,UnusedAttribute">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="16dp"
+            android:text="@string/plus"
+            android:textSize="28sp"
+            tools:ignore="RtlSymmetry" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rectangle"
+        android:elevation="0.1dp"
+        android:gravity="center"
+        tools:targetApi="lollipop">
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/zero"
+            android:textSize="24sp" />
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -84,6 +84,9 @@
     <string name="register">Register</string>
     <string name="name_is_required">Name is required</string>
     <string name="done">Done</string>
+    <string name="zero">0</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
 
 
     <string-array name="sex_array">
