@@ -139,7 +139,14 @@ public class TypeDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                count.setText(String.valueOf(Integer.parseInt(count.getText().toString())+1));
+                // evaluate new value.
+                int number = Integer.parseInt(count.getText().toString())+1;
+
+                // set the new value into TextView.
+                count.setText(String.valueOf(number));
+
+                // save the new value.
+                Utils.saveValue(TypeDetailActivity.this, Const.KEY_USER_HOUR, number);
             }
         });
 
@@ -148,10 +155,15 @@ public class TypeDetailActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // decrement the counter if its more than zero.
-                count.setText(
-                        count.getText().toString().equals("0") ?
-                                getResources().getString(R.string.zero) :
-                                String.valueOf(Integer.parseInt(count.getText().toString())-1));
+                String number = count.getText().toString().equals("0") ?
+                        getResources().getString(R.string.zero) :
+                        String.valueOf(Integer.parseInt(count.getText().toString())-1);
+
+                // set the new value into TextView.
+                count.setText(number);
+
+                // save the new value.
+                Utils.saveValue(TypeDetailActivity.this, Const.KEY_USER_HOUR, Integer.parseInt(number));
             }
         });
 
