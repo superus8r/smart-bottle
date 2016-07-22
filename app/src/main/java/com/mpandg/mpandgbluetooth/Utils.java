@@ -7,6 +7,9 @@ import android.text.InputFilter;
 import android.text.Spanned;
 import android.util.Log;
 
+import com.mpandg.mpandgbluetooth.model.BodyType;
+import com.mpandg.mpandgbluetooth.model.UserInfo;
+
 public class Utils {
 
     /**
@@ -190,6 +193,20 @@ public class Utils {
 
         // save user type.
         saveValue(context, Const.KEY_USER_TYPE, type);
+    }
+
+    public static UserInfo getUserInfo(Context context) {
+
+        UserInfo info = new UserInfo();
+        info.setType(getStringPref(context, Const.KEY_USER_TYPE));
+        info.setHours(getIntegerPref(context, Const.KEY_USER_HOUR));
+        info.setHeight(getIntegerPref(context, Const.KEY_USER_HEIGHT));
+        info.setWeight(getIntegerPref(context, Const.KEY_USER_WEIGHT));
+        info.setSex(getStringPref(context, Const.KEY_USER_SEX));
+        info.setUsername(getStringPref(context, Const.KEY_USER_NAME));
+        info.setToken(getStringPref(context, Const.KEY_USER_TOKEN));
+
+        return info;
     }
 
     public static double evaluateIbm(Context context) {
