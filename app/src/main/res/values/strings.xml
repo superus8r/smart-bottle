@@ -75,6 +75,22 @@
     They should at least drink half of a glass water every hour.
     So Hoosh noosh suggest runners drink a glass of water based on the given program by the bottle application for 2 hours.
     Consuming every kc demands drinking 1 cc water so body can continue its metabolize.</string>
+    <string name="aged_detail">Since old people’s kidneys are weaker they store more toxin in their cells so it’s important for them to stay hydrated. Experts suggest old people stay hydrated during the day to stay healthy, they need to drink 8 to 10 glasses of water every day. But it’s important for them to drink this amount of water on schedule.
+That’s why we decided to make an application to smartly manage this for them.
+This type sends notifications every 3 hours and reminds them to drink their glass of water.
+
+In this section if you suffer from a special disease that requires you to drink water - such as kidney problems – your drinking water data will be sent on the web client and then to your doctor.
+</string>
+    <string name="general_detail">
+        It’s important for everyone to stay hydrated during the day. Drinking water helps you to get rid of toxins. But if you drink water on a good plan it can also help you to become healthier.
+According to some experiments consuming every k cl demands 1 cc of water.
+
+A normal person consumes 2500 k cl every day so he/she should drink 2500 cc water that equals to 10 glasses.
+Hoosh noosh is a smart package that helps people to drink this amount of water on a right schedule.
+    </string>
+
+    <string name="culligan_water_link">http://www.culliganwater.com/residential/resources/drinking-water-apps/</string>
+
     <string name="per_hour">Per Hour</string>
     <string name="cup_of_water">Cup Of Water</string>
     <string name="ibm">IBM</string>

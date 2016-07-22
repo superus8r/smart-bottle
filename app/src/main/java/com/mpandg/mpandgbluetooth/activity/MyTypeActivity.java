@@ -49,7 +49,7 @@ public class MyTypeActivity extends AppCompatActivity implements View.OnClickLis
         switch (view.getId()) {
             case R.id.card_general_user:
                 // send the corresponding type for navigation purposes.
-                bodyType = new BodyType(this, getResources().getString(R.string.general_user), R.color.general_user, R.drawable.general_user, R.string.lorem_ipsum);
+                bodyType = new BodyType(this, getResources().getString(R.string.general_user), R.color.general_user, R.drawable.general_user, R.string.general_detail);
                 TypeDetailActivity.navigate(this, view.findViewById(R.id.iv_general_user), bodyType);
                 break;
             case R.id.card_body_builder:
@@ -65,7 +65,7 @@ public class MyTypeActivity extends AppCompatActivity implements View.OnClickLis
                 TypeDetailActivity.navigate(this, view.findViewById(R.id.iv_biker), bodyType);
                 break;
             case R.id.card_aged:
-                bodyType = new BodyType(this, getResources().getString(R.string.aged), R.color.aged, R.drawable.aged, R.string.lorem_ipsum);
+                bodyType = new BodyType(this, getResources().getString(R.string.aged), R.color.aged, R.drawable.aged, R.string.aged_detail);
                 TypeDetailActivity.navigate(this, view.findViewById(R.id.iv_aged), bodyType);
                 break;
             case R.id.card_add_type:
