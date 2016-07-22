@@ -90,7 +90,7 @@
                         android:text="@string/dummy"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
-                    <include layout="@layout/count_select_rectangular"/>
+                    <include android:id="@+id/chooser" layout="@layout/count_select_rectangular"/>
 
                 </LinearLayout>
 

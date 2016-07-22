@@ -139,11 +139,7 @@ public class TypeDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // increment the count and add the new count into dataBase.
-                //BodyType type = Utils.getBodyType();
-
-                // update the count.
-                //count.setText(String.valueOf(item.getCount()));
+                count.setText(String.valueOf(Integer.parseInt(count.getText().toString())+1));
             }
         });
 
@@ -151,7 +147,11 @@ public class TypeDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
+                // decrement the counter if its more than zero.
+                count.setText(
+                        count.getText().toString().equals("0") ?
+                                getResources().getString(R.string.zero) :
+                                String.valueOf(Integer.parseInt(count.getText().toString())-1));
             }
         });
 

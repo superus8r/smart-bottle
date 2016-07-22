@@ -1,10 +1,14 @@
 package com.mpandg.mpandgbluetooth.network;
 
+import com.mpandg.mpandgbluetooth.model.Error;
 import com.mpandg.mpandgbluetooth.model.RegisterResult;
 import com.mpandg.mpandgbluetooth.model.Result;
 
 import retrofit.Callback;
+import retrofit.http.GET;
+import retrofit.http.Header;
 import retrofit.http.POST;
+import retrofit.http.Part;
 import retrofit.http.Query;
 
 /**
@@ -19,8 +23,14 @@ public interface API {
 
     @POST("/register/new/")
     void getCities(
-            @Query("username") String password,
-            @Query("userpass") String username,
+            @Part("username") String password,
+            @Part("userpass") String username,
             Callback<Result<RegisterResult>> result
+    );
+
+    @GET("/register/validate/")
+    void validateRegistration(
+            @Header("Authorization") String token,
+            Callback<Result<Error>> result
     );
 }
