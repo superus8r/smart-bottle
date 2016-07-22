@@ -1,10 +1,8 @@
 package com.mpandg.mpandgbluetooth;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.text.InputFilter;
 import android.text.Spanned;
 import android.util.Log;
@@ -202,4 +200,5 @@ public class Utils {
         // x=weight/height^2.
         return weight / Math.pow(height, 2.0);
     }
+
 }

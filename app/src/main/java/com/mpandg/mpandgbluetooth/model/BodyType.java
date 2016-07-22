@@ -15,6 +15,7 @@ public class BodyType implements Parcelable {
     private int color;
     private int photo;
     private String description;
+    private int hours;
 
     public BodyType (Context context, String name, int color, int photo, int descriptionResId) {
 
@@ -60,6 +61,16 @@ public class BodyType implements Parcelable {
         this.description = description;
     }
 
+    public int getHours() {
+
+        return hours;
+    }
+
+    public void setHours(int hours) {
+
+        this.hours = hours;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -71,6 +82,7 @@ public class BodyType implements Parcelable {
         dest.writeInt(this.color);
         dest.writeInt(this.photo);
         dest.writeString(this.name);
+        dest.writeInt(this.hours);
     }
 
     public BodyType() {
@@ -81,6 +93,7 @@ public class BodyType implements Parcelable {
         this.color = in.readInt();
         this.photo = in.readInt();
         this.name = in.readString();
+        this.hours = in.readInt();
     }
 
     public static final Parcelable.Creator<BodyType> CREATOR = new Parcelable.Creator<BodyType>() {

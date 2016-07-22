@@ -8,13 +8,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.mpandg.mpandgbluetooth.Const;
 import com.mpandg.mpandgbluetooth.R;
 import com.mpandg.mpandgbluetooth.Utils;
+import com.squareup.picasso.Picasso;
 
 public class MainActivity extends DeviceControlActivity {
+
+    private ImageView bottle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,7 @@ public class MainActivity extends DeviceControlActivity {
 
         setTitle(R.string.app_name);
 
-        ImageView bottle = (ImageView) findViewById(R.id.bottle);
+        bottle = (ImageView) findViewById(R.id.bottle);
         bottle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,6 +84,89 @@ public class MainActivity extends DeviceControlActivity {
     @Override
     public void receive(String message) {
         super.receive(message);
-        Toast.makeText(this, "message:" + message, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "message:" + message, Toast.LENGTH_SHORT).show();
+
+        switch (message.charAt(0)) {
+            case '0':
+
+                Picasso.with(this)
+                        .load(R.drawable.bottle_10)
+                        .placeholder(R.drawable.bottle_100)
+                        .error(R.drawable.bottle_10)
+                        .into(bottle);
+                break;
+            case '1':
+
+                Picasso.with(this)
+                        .load(R.drawable.bottle_20)
+                        .placeholder(R.drawable.bottle_100)
+                        .error(R.drawable.bottle_10)
+                        .into(bottle);
+                break;
+            case '2':
+
+                Picasso.with(this)
+                        .load(R.drawable.bottle_30)
+                        .placeholder(R.drawable.bottle_100)
+                        .error(R.drawable.bottle_10)
+                        .into(bottle);
+                break;
+            case '3':
+
+                Picasso.with(this)
+                        .load(R.drawable.bottle_40)
+                        .placeholder(R.drawable.bottle_100)
+                        .error(R.drawable.bottle_10)
+                        .into(bottle);
+                break;
+            case '4':
+
+                Picasso.with(this)
+                        .load(R.drawable.bottle_50)
+                        .placeholder(R.drawable.bottle_100)
+                        .error(R.drawable.bottle_10)
+                        .into(bottle);
+                break;
+            case '5':
+
+                Picasso.with(this)
+                        .load(R.drawable.bottle_60)
+                        .placeholder(R.drawable.bottle_100)
+                        .error(R.drawable.bottle_10)
+                        .into(bottle);
+                break;
+            case '6':
+
+                Picasso.with(this)
+                        .load(R.drawable.bottle_70)
+                        .placeholder(R.drawable.bottle_100)
+                        .error(R.drawable.bottle_10)
+                        .into(bottle);
+                break;
+            case '7':
+
+                Picasso.with(this)
+                        .load(R.drawable.bottle_80)
+                        .placeholder(R.drawable.bottle_100)
+                        .error(R.drawable.bottle_10)
+                        .into(bottle);
+                break;
+            case '8':
+
+                Picasso.with(this)
+                        .load(R.drawable.bottle_90)
+                        .placeholder(R.drawable.bottle_100)
+                        .error(R.drawable.bottle_10)
+                        .into(bottle);
+                break;
+            case '9':
+
+                Picasso.with(this)
+                        .load(R.drawable.bottle_100)
+                        .placeholder(R.drawable.bottle_100)
+                        .error(R.drawable.bottle_10)
+                        .into(bottle);
+                break;
+        }
     }
 }

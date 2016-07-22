@@ -20,6 +20,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -128,6 +129,29 @@ public class TypeDetailActivity extends AppCompatActivity {
                 // set the result and its data and finish the activity.
                 setResult(RESULT_OK, data);
                 finish();
+            }
+        });
+
+        FrameLayout minus = (FrameLayout) findViewById(R.id.minus);
+        FrameLayout plus = (FrameLayout) findViewById(R.id.plus);
+        final TextView count = (TextView) findViewById(R.id.count);
+        plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // increment the count and add the new count into dataBase.
+                //BodyType type = Utils.getBodyType();
+
+                // update the count.
+                //count.setText(String.valueOf(item.getCount()));
+            }
+        });
+
+        minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
             }
         });
 

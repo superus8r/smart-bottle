@@ -441,12 +441,13 @@ public class DeviceControlActivity extends BaseActivity {
 
                                 // listen to module to recieve messages.
                                 activity.appendLog(readMessage, false, false, activity.needClean);
-                                activity.receive(readMessage);
                             }
                             break;
                         } catch (NullPointerException npe) {
                             // we're not in Terminal.
                             npe.printStackTrace();
+                            // use receive method to inform subclasses which are using this class.
+                            activity.receive(readMessage);
                         }
                         break;
 
